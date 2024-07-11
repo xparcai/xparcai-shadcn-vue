@@ -1,11 +1,32 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "useDefineForClassFields": true,
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@ui/*": ["./src/shadcn/ui/*"],
+      "@/*": ["./src/*"]
     },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+    "resolveJsonModule": true,
+    "typeRoots": ["node_modules/", "src/types/"],
+    "types": [
+      "vite/client"
+    ],
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  }
 }
